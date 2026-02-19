@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Completo | TIQUICIAFOOD</title>
+    <meta name="description" content="Explora nuestra carta completa: entradas, platos fuertes, postres y bebidas.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/logorestaurante.png" alt="TIQUICIAFOOD" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="menu.html" class="nav-link active">Menú</a></li>
+                <li><a href="locales.html" class="nav-link">Ubicaciones</a></li>
+                <li><a href="index.html#contacto" class="btn btn-primary">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <header class="hero menu-hero">
+        <div class="hero-bg">
+            <img src="img/hero/heroimagen1.jpg" alt="Ingredientes frescos" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content text-center">
+            <h1 class="hero-title animate-text">Nuestra <span class="text-accent">Carta</span></h1>
+            <p class="hero-subtitle animate-text delay-1">Un recorrido por los sabores más auténticos de Costa Rica.</p>
+        </div>
+    </header>
+
+    <!-- Premium Menu Layout -->
+    <section class="section menu-premium-section">
+        <div class="container">
+
+            <!-- Sticky Category Nav -->
+            <div class="category-nav-sticky" id="categoryNav">
+                <button class="nav-pill active" data-category="all">Todo</button>
+                <button class="nav-pill" data-category="platos">Platos Fuertes</button>
+                <button class="nav-pill" data-category="entradas">Entradas</button>
+                <button class="nav-pill" data-category="postres">Postres</button>
+                <button class="nav-pill" data-category="bebidas">Bebidas</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="masonry-grid" id="menu-grid">
+
+                <!-- Item 1: Large Feature -->
+                <div class="masonry-item feature-item" data-category="platos">
+                    <div class="masonry-image">
+                        <img src="img/hero/heroimagen2.jpg" alt="Casado Premium" loading="lazy">
+                        <div class="badge-premium">Recomendado</div>
+                    </div>
+                    <div class="masonry-content">
+                        <div class="masonry-header">
+                            <h3>Casado Deluxe</h3>
+                            <span class="price">₡6,500</span>
+                        </div>
+                        <p class="description">Nuestra joya culinaria: Arroz, frijoles tiernos, plátano maduro
+                            caramelizado, ensalada de la huerta, picadillo del día y su elección de proteína premium
+                            bañada en salsa de la casa.</p>
+                        <div class="tags">
+                            <span class="tag">Tradición</span>
+                            <span class="tag">Sin Gluten</span>
+                        </div>
+                        <div class="menu-actions">
+                            <button class="btn btn-outline detail-btn">Detalles</button>
+                            <button class="btn btn-primary consult-btn"><i class="fab fa-whatsapp"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Vertical -->
+                <div class="masonry-item" data-category="platos">
+                    <div class="masonry-image">
+                        <img src="img/hero/heroimagen3.jpg" alt="Gallo Pinto Deluxe" loading="lazy">
+                    </div>
+                    <div class="masonry-content">
+                        <div class="masonry-header">
+                            <h3>Pinto Amanacer</h3>
+                            <span class="price">₡5,000</span>
+                        </div>
+                        <p class="description">El desayuno de campeones. Pinto suelto y aromático, huevos al gusto,
+                            natilla casera y tortilla palmeada.</p>
+                        <div class="menu-actions">
+                            <button class="btn btn-outline detail-btn">Detalles</button>
+                            <button class="btn btn-primary consult-btn"><i class="fab fa-whatsapp"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Compact -->
+                <div class="masonry-item" data-category="entradas">
+                    <div class="masonry-image">
+                        <img src="img/hero/heroimagen4.jpg" alt="Chifrijo" loading="lazy">
+                    </div>
+                    <div class="masonry-content">
+                        <div class="masonry-header">
+                            <h3>Chifrijo Bowl</h3>
+                            <span class="price">₡4,500</span>
+                        </div>
+                        <p class="description">Capas de sabor: arroz, frijoles, chicharrón crujiente y pico de gallo
+                            fresco.</p>
+                        <div class="menu-actions">
+                            <button class="btn btn-outline detail-btn">Detalles</button>
+                            <button class="btn btn-primary consult-btn"><i class="fab fa-whatsapp"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Wide -->
+                <div class="masonry-item" data-category="postres">
+                    <div class="masonry-image">
+                        <img src="img/hero/heroimagen1.jpg" alt="Arroz con leche" loading="lazy">
+                    </div>
+                    <div class="masonry-content">
+                        <div class="masonry-header">
+                            <h3>Arroz con Leche</h3>
+                            <span class="price">₡2,800</span>
+                        </div>
+                        <p class="description">Receta de la abuela, cremoso, con canela y pasas maceradas.</p>
+                        <div class="menu-actions">
+                            <button class="btn btn-outline detail-btn">Detalles</button>
+                            <button class="btn btn-primary consult-btn"><i class="fab fa-whatsapp"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for Beverages using Hero Image 3 again simply as placeholder -->
+                <div class="masonry-item" data-category="bebidas">
+                    <div class="masonry-image">
+                        <img src="img/restaurantePersonas.jpg" alt="Bebidas Naturales" loading="lazy">
+                    </div>
+                    <div class="masonry-content">
+                        <div class="masonry-header">
+                            <h3>Naturales de Fruta</h3>
+                            <span class="price">₡1,500</span>
+                        </div>
+                        <p class="description">Cas, Guanábana, Mora o Maracuyá. 100% pulpa natural.</p>
+                        <div class="menu-actions">
+                            <button class="btn btn-outline detail-btn">Detalles</button>
+                            <button class="btn btn-primary consult-btn"><i class="fab fa-whatsapp"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TIQUICIAFOOD</h3>
+                    <p>Auténtico sabor costarricense con un toque moderno.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="menu.html">Menú</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>San José, Costa Rica</p>
+                    <p>info@tiquiciafood.com</p>
+                    <p>+506 2222-2222</p>
+                    <div class="social-links mt-4">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TIQUICIAFOOD. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/50622222222" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+50622222222" class="float-btn phone" aria-label="Llamar">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script>
+        // Menu Filtering Logic (Premium Layout)
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.nav-pill');
+            const items = document.querySelectorAll('.masonry-item');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Active class
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const category = btn.getAttribute('data-category');
+
+                    items.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+
+                        if (category === 'all' || itemCategory === category) {
+                            item.style.display = 'flex'; // Masonry items use flex
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            item.style.display = 'none';
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <!-- Dish Details Modal -->
+    <div class="modal-overlay" id="dish-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <img src="" alt="" class="modal-img" id="modal-img">
+            <div class="modal-body">
+                <h3 class="modal-title" id="modal-title"></h3>
+                <span class="modal-price" id="modal-price"></span>
+                <p class="modal-desc" id="modal-desc"></p>
+                <!-- Optional: Actions inside modal too -->
+                <button class="btn btn-primary btn-full" id="modal-consult-btn"><i class="fab fa-whatsapp"></i>
+                    Consultar platillo</button>
+            </div>
+        </div>
+    </div>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- Anti-Inspect Script -->
+    <script>
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        document.onkeydown = (e) => {
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if (
+                e.keyCode === 123 ||
+                (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+                (e.ctrlKey && e.shiftKey && e.keyCode === 74) ||
+                (e.ctrlKey && e.keyCode === 85)
+            ) {
+                return false;
+            }
+        };
+    </script>
+</body>
+
+</html>

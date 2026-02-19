@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIQUICIAFOOD | Sabor Auténtico de Costa Rica</title>
+    <meta name="description"
+        content="Disfruta de la mejor gastronomía costarricense en un ambiente premium e inolvidable.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Dish Detail Modal (Moved to top for Z-Index) -->
+    <div id="dish-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="close-dish-modal">&times;</button>
+            <div class="modal-img-container">
+                <img id="modal-dish-img" src="" alt="Detalle del Platillo">
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-dish-title" class="modal-title"></h3>
+                <span id="modal-dish-price" class="modal-price"></span>
+                <p id="modal-dish-desc" class="modal-desc"></p>
+                <div class="modal-footer-actions">
+                    <button class="btn btn-whatsapp-card w-100" id="modal-consult-btn">
+                        Consultar por WhatsApp <i class="fab fa-whatsapp"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <img src="img/logorestaurante.png" alt="TIQUICIAFOOD" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="menu.html" class="nav-link">Menú</a></li>
+                <li><a href="locales.html" class="nav-link">Ubicaciones</a></li>
+                <li><a href="#contacto" class="btn btn-primary">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section (Minimalist Zen Redesign) -->
+    <header id="inicio" class="hero">
+        <!-- Slide 1: Food -->
+        <div class="hero-slide active">
+            <div class="hero-bg">
+                <video id="hero-video" class="hero-image" muted loop playsinline preload="metadata"
+                    poster="img/hero/heroimagen1.jpg">
+                    <source src="video/hero/herovideo1.mp4" type="video/mp4">
+                    <img src="img/hero/heroimagen1.jpg" alt="Plato típico costarricense" class="hero-image">
+                </video>
+                <div class="hero-overlay-minimal"></div>
+            </div>
+            <div class="container hero-container-minimal">
+                <div class="hero-content-minimal animate-text">
+                    <span class="hero-kicker">Est. 1985</span>
+                    <h1 class="hero-title-minimal">Alma <span class="font-italic">Tica</span></h1>
+                    <p class="hero-desc-minimal">Cocina con memoria y corazón.</p>
+                    <div class="hero-actions-minimal">
+                        <a href="menu.html" class="link-minimal">Ver Menú</a>
+                        <span class="separator">•</span>
+                        <a href="locales.html" class="link-minimal">Locales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Staff -->
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="img/trabajadores.jpg" alt="Nuestro equipo" class="hero-image">
+                <div class="hero-overlay-minimal"></div>
+            </div>
+            <div class="container hero-container-minimal">
+                <div class="hero-content-minimal animate-text">
+                    <span class="hero-kicker">Nuestra Gente</span>
+                    <h1 class="hero-title-minimal">Pura <span class="font-italic">Pasión</span></h1>
+                    <p class="hero-desc-minimal">Creando momentos inolvidables.</p>
+                    <div class="hero-actions-minimal">
+                        <a href="#nosotros" class="link-minimal">Historia</a>
+                        <span class="separator">•</span>
+                        <a href="#testimonios" class="link-minimal">Reseñas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Dishes Section (Premium Bento Grid) -->
+    <section id="platillos" class="section featured-dishes-section">
+        <div class="container">
+            <h4 class="sub-heading text-center scroll-reveal fade-up">Nuestra Cocina</h4>
+            <h2 class="section-title text-center scroll-reveal fade-up delay-1">Platillos <span
+                    class="highlight-text">Principales</span></h2>
+
+            <div class="bento-grid scroll-reveal fade-up delay-2">
+                <!-- Dish 1 (Large Vertical) -->
+                <article class="bento-item item-1">
+                    <img src="img/hero/heroimagen1.jpg" alt="Casado Típico Premium" loading="lazy">
+                    <div class="bento-overlay">
+                        <h3>Casado Real</h3>
+                        <p>La tradición elevada.</p>
+                        <div class="panel-actions mt-2 justify-content-center">
+                            <button class="btn btn-sm btn-outline-light btn-details" data-title="Casado Real"
+                                data-desc="El Casado Real es un festín de sabores: arroz blanco, frijoles negros, plátano maduro en miel, picadillo de la abuela, carne en salsa y ensalada fresca."
+                                data-price="₡6,500" data-img="img/hero/heroimagen1.jpg">
+                                Detalles
+                            </button>
+                            <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Casado Real">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 2 (Small) -->
+                <article class="bento-item item-2">
+                    <img src="img/hero/heroimagen2.jpg" alt="Gallo Pinto Especial" loading="lazy">
+                    <div class="bento-overlay">
+                        <h3>Pinto del Valle</h3>
+                        <p>Desayuno icónico.</p>
+                        <div class="panel-actions mt-2 justify-content-center">
+                            <button class="btn btn-sm btn-outline-light btn-details" data-title="Pinto del Valle"
+                                data-desc="Gallo Pinto esponjoso con 'Salsa Lizano' secreta, acompañado de huevos al gusto, natilla, queso frito y tortillas caseras."
+                                data-price="₡5,000" data-img="img/hero/heroimagen2.jpg">
+                                Detalles
+                            </button>
+                            <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Pinto del Valle">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 3 (Small) -->
+                <article class="bento-item item-3">
+                    <img src="img/hero/heroimagen3.jpg" alt="Chifrijo Tico" loading="lazy">
+                    <div class="bento-overlay">
+                        <h3>Chifrijo Bowl</h3>
+                        <p>Sabor intenso.</p>
+                        <div class="panel-actions mt-2 justify-content-center">
+                            <button class="btn btn-sm btn-outline-light btn-details" data-title="Chifrijo Bowl"
+                                data-desc="Un bowl cargado de chicharrón carnudo, frijoles cubaces tiernos, arroz, pico de gallo y chips de plátano."
+                                data-price="₡4,500" data-img="img/hero/heroimagen3.jpg">
+                                Detalles
+                            </button>
+                            <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Chifrijo Bowl">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 4 (Wide) -->
+                <article class="bento-item item-4">
+                    <img src="img/hero/heroimagen4.jpg" alt="Olla de Carne" loading="lazy">
+                    <div class="bento-overlay">
+                        <h3>Olla de la Abuela</h3>
+                        <p>Confort en cada cuchara.</p>
+                        <div class="panel-actions mt-2 justify-content-center">
+                            <button class="btn btn-sm btn-outline-light btn-details" data-title="Olla de la Abuela"
+                                data-desc="Sustanciosa sopa de costilla de res con verduras de la huerta: yuca, pataste, elote y zanahoria."
+                                data-price="₡5,800" data-img="img/hero/heroimagen4.jpg">
+                                Detalles
+                            </button>
+                            <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Olla de la Abuela">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About/Legacy Section (Redesign) -->
+    <section id="nosotros" class="legacy-section">
+        <div class="container legacy-container">
+            <div class="legacy-text-block scroll-reveal fade-right">
+                <h4 class="sub-heading">Nuestra Esencia</h4>
+                <h2 class="legacy-title">Más que comida,<br>un <span class="highlight-text">Legado Vivido.</span></h2>
+                <p class="legacy-desc">
+                    En cada plato servimos un fragmento de historia. No somos solo un restaurante; somos la memoria de
+                    las abuelas, el aroma del café chorreado al amanecer y la calidez de una mesa compartida.
+                </p>
+                <div class="legacy-badges">
+                    <span class="l-badge">Orgánico</span>
+                    <span class="l-badge">Tradición</span>
+                    <span class="l-badge">Vanguardia</span>
+                </div>
+                <a href="#contacto" class="btn btn-outline-dark mt-4">Vivir la Experiencia</a>
+            </div>
+
+            <div class="legacy-visuals">
+                <!-- Layer 1: Main Image (Arch) -->
+                <div class="legacy-layer layer-1 parallax" data-speed="0.1">
+                    <img src="img/hero/heroimagen2.jpg" alt="Casado de Autor">
+                </div>
+                <!-- Layer 2: Secondary (Floating Card) -->
+                <div class="legacy-layer layer-2 parallax" data-speed="-0.05">
+                    <img src="img/restaurantePersonas.jpg" alt="Ambiente">
+                </div>
+                <!-- Layer 3: Accent Element (Texture/Detail) -->
+                <div class="legacy-layer layer-3 parallax" data-speed="0.15">
+                    <img src="img/hero/heroimagen3.jpg" alt="Ingrediente">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <!-- Menu Highlights (Spotlight Accordion) -->
+    <section id="menu" class="section favorites-section">
+        <div class="section-header text-center mb-5 scroll-reveal fade-up">
+            <h2 class="section-title text-restaurant-style">Favoritos de la Casa</h2>
+            <p class="section-subtitle">Una selección de nuestros platillos más icónicos.</p>
+        </div>
+
+        <div class="favorites-accordion">
+            <!-- Panel 1 -->
+            <div class="fav-panel active" style="background-image: url('img/hero/heroimagen2.jpg');">
+                <div class="panel-overlay"></div>
+                <div class="panel-content">
+                    <h3>Casado Premium</h3>
+                    <p class="panel-desc">La máxima expresión del sabor tico. Carne en salsa, picadillo de la casa y
+                        plátano maduro en su punto.</p>
+                    <span class="panel-price">₡6,500</span>
+                    <div class="panel-actions mt-3">
+                        <button class="btn btn-sm btn-outline-light btn-details" data-title="Casado Premium"
+                            data-desc="Nuestro Casado Premium incluye arroz, frijoles tiernos, carne en salsa de la casa, picadillo de chayote, plátano maduro, ensalada fresca y huevo frito."
+                            data-price="₡6,500" data-img="img/hero/heroimagen2.jpg">
+                            Detalles
+                        </button>
+                        <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Casado Premium">
+                            Consultar <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="fav-panel" style="background-image: url('img/hero/heroimagen3.jpg');">
+                <div class="panel-overlay"></div>
+                <div class="panel-content">
+                    <h3>Gallo Pinto Deluxe</h3>
+                    <p class="panel-desc">Desayuno, almuerzo o cena. Nuestro pinto es famoso por su "salsa secreta"
+                        y acompañamientos frescos.</p>
+                    <span class="panel-price">₡5,000</span>
+                    <div class="panel-actions mt-3">
+                        <button class="btn btn-sm btn-outline-light btn-details" data-title="Gallo Pinto Deluxe"
+                            data-desc="El Gallo Pinto Deluxe viene acompañado de huevos al gusto, natilla, plátano maduro, queso frito y tortillas palmeadas."
+                            data-price="₡5,000" data-img="img/hero/heroimagen3.jpg">
+                            Detalles
+                        </button>
+                        <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Gallo Pinto Deluxe">
+                            Consultar <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="fav-panel" style="background-image: url('img/hero/heroimagen4.jpg');">
+                <div class="panel-overlay"></div>
+                <div class="panel-content">
+                    <h3>Chifrijo Típico</h3>
+                    <p class="panel-desc">El rey de las bocas. Chicharrón crujiente, frijoles tiernos y un pico de
+                        gallo explosivo.</p>
+                    <span class="panel-price">₡4,500</span>
+                    <div class="panel-actions mt-3">
+                        <button class="btn btn-sm btn-outline-light btn-details" data-title="Chifrijo Típico"
+                            data-desc="Capas perfectas de arroz, frijoles tiernos, chicharrones de carne crujientes, pico de gallo fresco y aguacate, servido con chips de tortilla."
+                            data-price="₡4,500" data-img="img/hero/heroimagen4.jpg">
+                            Detalles
+                        </button>
+                        <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Chifrijo Típico">
+                            Consultar <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4 -->
+            <div class="fav-panel" style="background-image: url('img/hero/heroimagen1.jpg');">
+                <div class="panel-overlay"></div>
+                <div class="panel-content">
+                    <h3>Olla de Carne</h3>
+                    <p class="panel-desc">Caldo reconfortante con verduras frescas y costilla de res suave como la
+                        mantequilla.</p>
+                    <span class="panel-price">₡5,800</span>
+                    <div class="panel-actions mt-3">
+                        <button class="btn btn-sm btn-outline-light btn-details" data-title="Olla de Carne"
+                            data-desc="Tradicional sopa costarricense con trozos de yuca, papa, camote, elote, zanahoria y costilla de res, cocinada a fuego lento."
+                            data-price="₡5,800" data-img="img/hero/heroimagen1.jpg">
+                            Detalles
+                        </button>
+                        <button class="btn btn-sm btn-whatsapp-card btn-consult" data-dish="Olla de Carne">
+                            Consultar <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 scroll-reveal fade-up">
+            <a href="menu.html" class="btn btn-outline-dark">Ver Menú Completo</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Parallax Atmosphere -->
+    <section class="parallax-section">
+        <div class="parallax-bg" style="background-image: url('img/imagenFondo.jpg');"></div>
+        <div class="parallax-overlay"></div>
+        <div class="container parallax-content text-center">
+            <h2 class="animate-text text-restaurant-style">Un Ambiente Único</h2>
+            <p>Donde cada detalle cuenta para hacerte sentir en casa.</p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="testimonios" class="section reviews-section">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal fade-up">
+                <h4 class="sub-heading">Testimonios</h4>
+                <h2 class="section-title">Voces de la <span class="highlight-text">Familia</span></h2>
+                <p class="section-subtitle">Lo que dicen quienes ya se sentaron a nuestra mesa.</p>
+            </div>
+
+            <div class="reviews-scroller scroll-reveal fade-up delay-1">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Carlos M.</h3>
+                        <span class="role">El Turista</span>
+                    </div>
+                    <p class="review-text">"Vine a Costa Rica por el volcán, pero volví por el Gallo Pinto de este
+                        lugar. Simplemente adictivo."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Doña Marta</h3>
+                        <span class="role">La Abuela Exigente</span>
+                    </div>
+                    <p class="review-text">"Casi tan bueno como el mío, y eso es mucho decir. El secreto está en los
+                        olores, me recuerdan a mi juventud."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Roberto S.</h3>
+                        <span class="role">El Ejecutivo</span>
+                    </div>
+                    <p class="review-text">"Mi escape de paz en medio del caos de San José. Aquí el tiempo se detiene y
+                        la comida reconforta."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>Ana y Luis</h3>
+                        <span class="role">La Pareja</span>
+                    </div>
+                    <p class="review-text">"Pedimos un Casado para compartir y terminamos peleando por el último
+                        patacón. La próxima pedimos dos."</p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Chef J.P.</h3>
+                        <span class="role">El Crítico</span>
+                    </div>
+                    <p class="review-text">"Sencillez ejecutada con maestría. No hay pretensiones, solo ingredientes
+                        respetados y cocinados a la perfección."</p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Mateo R.</h3>
+                        <span class="role">El Nostálgico</span>
+                    </div>
+                    <p class="review-text">"Llevo 10 años viviendo fuera del país. El primer bocado de chifrijo me hizo
+                        llorar. Sabe a casa."</p>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Sarah W.</h3>
+                        <span class="role">La Aventurera</span>
+                    </div>
+                    <p class="review-text">"Después de un día de rafting, este lugar me devolvió el alma al cuerpo. La
+                        atención es tan cálida como la comida."</p>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Elena G.</h3>
+                        <span class="role">La Vegana</span>
+                    </div>
+                    <p class="review-text">"¡Al fin un restaurante típico con opciones reales! El picadillo de chayote y
+                        los maduros son de otro mundo."</p>
+                </div>
+
+                <!-- Review 9 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Don Felipe</h3>
+                        <span class="role">El Cafetero</span>
+                    </div>
+                    <p class="review-text">"El café chorreado aquí es religión. Perfecto, sin azúcar, pura esencia tica.
+                        Vengo solo por eso... y las empanadas."</p>
+                </div>
+
+                <!-- Review 10 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Lucía M.</h3>
+                        <span class="role">La Fotógrafa</span>
+                    </div>
+                    <p class="review-text">"La comida entra por los ojos, y aquí todo es arte. La iluminación, los
+                        platos, los colores... una joya visual y gustativa."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locales Teaser Section -->
+    <section class="section locales-teaser text-center bg-texture-dots">
+        <div class="container">
+            <h2 class="section-title text-restaurant-style scroll-reveal fade-up">Nuestras Ubicaciones</h2>
+            <p class="section-subtitle scroll-reveal fade-up delay-1">Encuentra una sede cerca de ti.</p>
+
+            <div class="teaser-grid scroll-reveal fade-up delay-2">
+                <a href="locales.html" class="teaser-item">
+                    <img src="img/locales/Liberia.jpg" alt="Liberia" loading="lazy">
+                    <span class="teaser-name">Liberia</span>
+                </a>
+                <a href="locales.html" class="teaser-item">
+                    <img src="img/locales/Cartago.jpg" alt="Cartago" loading="lazy">
+                    <span class="teaser-name">Cartago</span>
+                </a>
+                <a href="locales.html" class="teaser-item">
+                    <img src="img/locales/Puntarenas.jpg" alt="Puntarenas" loading="lazy">
+                    <span class="teaser-name">Puntarenas</span>
+                </a>
+                <a href="locales.html" class="teaser-item">
+                    <img src="img/locales/Tamarindo.jpg" alt="Tamarindo" loading="lazy">
+                    <span class="teaser-name">Tamarindo</span>
+                </a>
+            </div>
+
+            <div class="mt-4 scroll-reveal fade-up delay-3">
+                <a href="locales.html" class="btn btn-primary">Ver todas las sedes</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Glassmorphism Contact Form Section -->
+    <section class="section contact-glass-section parallax-bg"
+        style="background-image: url('img/hero/heroimagen3.jpg');">
+        <div class="overlay-dark"></div>
+        <div class="container">
+            <div class="glass-form-card">
+                <div class="form-header text-center mb-5">
+                    <h2 class="form-title text-restaurant-style">Reserva tu Experiencia</h2>
+                    <p class="form-subtitle">Cuéntanos qué se te antoja y nosotros nos encargamos del resto.</p>
+                </div>
+
+                <form class="visual-form">
+                    <div class="form-grid">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Nombre</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="contact-name" class="form-input"
+                                    placeholder="Tu nombre completo">
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="contact-phone" class="form-label">Teléfono</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone input-icon"></i>
+                                <input type="tel" id="contact-phone" class="form-input" placeholder="+506 0000-0000">
+                            </div>
+                        </div>
+
+                        <!-- Dish Interest -->
+                        <div class="form-group full-width">
+                            <label for="contact-dish" class="form-label">Platillo de Interés</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-utensils input-icon"></i>
+                                <select id="contact-dish" class="form-input">
+                                    <option value="" disabled selected>Selecciona una opción...</option>
+                                    <option value="casado">Casado Premium</option>
+                                    <option value="pinto">Gallo Pinto Deluxe</option>
+                                    <option value="chifrijo">Chifrijo Típico</option>
+                                    <option value="otro">Otro / Consulta General</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Query -->
+                        <div class="form-group full-width">
+                            <label for="contact-message" class="form-label">Tu Consulta</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment-alt input-icon textarea-icon"></i>
+                                <textarea id="contact-message" class="form-input" rows="4"
+                                    placeholder="¿Tienes alguna alergia o petición especial?"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg btn-glow">
+                            Enviar Consulta <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TIQUICIAFOOD</h3>
+                    <p>Auténtico sabor costarricense con un toque moderno.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>San José, Costa Rica</p>
+                    <p>info@tiquiciafood.com</p>
+                    <p>+506 2222-2222</p>
+                    <div class="social-links mt-4">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TIQUICIAFOOD. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/50662776082" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+50662776082" class="float-btn phone" aria-label="Llamar">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

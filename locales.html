@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Ubicaciones | TIQUICIAFOOD</title>
+    <meta name="description"
+        content="Visítanos en Liberia, Cartago, Puntarenas y Tamarindo. Encuentra la ubicación más cercana.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-texture-dots">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="img/logorestaurante.png" alt="TIQUICIAFOOD" class="logo-img">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="menu.html" class="nav-link">Menú</a></li>
+                <li><a href="#" class="nav-link active">Ubicaciones</a></li>
+                <li><a href="index.html#contacto" class="btn btn-primary">Contactar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <header class="hero locales-hero">
+        <!-- Slide 1: General Video -->
+        <div class="hero-slide active">
+            <div class="hero-bg">
+                <video autoplay muted loop playsinline poster="img/locales/Tamarindo.jpg" class="hero-image">
+                    <source src="img/locales/localvideo.mp4" type="video/mp4">
+                    <img src="img/locales/Tamarindo.jpg" alt="Ubicaciones TiquiciaFood" class="hero-image">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content text-center">
+                <h1 class="hero-title animate-text">Nuestras <span class="text-accent">Sedes</span></h1>
+                <p class="hero-subtitle animate-text delay-1">Llevando el sabor de Costa Rica a cada rincón.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Liberia -->
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="img/locales/Liberia.jpg" alt="Sede Liberia" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content text-center">
+                <h1 class="hero-title animate-text">Sede <span class="text-accent">Liberia</span></h1>
+                <p class="hero-subtitle animate-text delay-1">El corazón de Guanacaste.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Cartago -->
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="img/locales/Cartago.jpg" alt="Sede Cartago" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content text-center">
+                <h1 class="hero-title animate-text">Sede <span class="text-accent">Cartago</span></h1>
+                <p class="hero-subtitle animate-text delay-1">Tradición en la vieja metrópoli.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Puntarenas -->
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="img/locales/Puntarenas.jpg" alt="Sede Puntarenas" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content text-center">
+                <h1 class="hero-title animate-text">Sede <span class="text-accent">Puntarenas</span></h1>
+                <p class="hero-subtitle animate-text delay-1">Sabor frente al mar.</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Tamarindo -->
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="img/locales/Tamarindo.jpg" alt="Sede Tamarindo" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content text-center">
+                <h1 class="hero-title animate-text">Sede <span class="text-accent">Tamarindo</span></h1>
+                <p class="hero-subtitle animate-text delay-1">Paraíso tropical y buen comer.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Locales Section -->
+    <section class="section locales-section">
+        <div class="container">
+            <div class="locales-grid">
+
+                <!-- Liberia -->
+                <article class="locale-card scroll-reveal fade-up">
+                    <div class="locale-image">
+                        <img src="img/locales/Liberia.jpg" alt="Restaurante en Liberia" loading="lazy">
+                        <div class="locale-badge locale-badge-guanacaste">Guanacaste</div>
+                    </div>
+                    <div class="locale-content">
+                        <h2 class="locale-title">Liberia</h2>
+                        <p class="locale-address"><i class="fas fa-map-marker-alt text-accent"></i> 200m este del Banco
+                            Central</p>
+
+                        <div class="map-actions">
+                            <button class="btn btn-primary active btn-sm btn-map-trigger" data-map-type="google"
+                                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60617.60704605025!2d-85.51711382490151!3d10.629533388934833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f757d2a8a1c08e5%3A0xb2f8a494fb368393!2sProvincia%20de%20Guanacaste%2C%20Liberia!5e1!3m2!1ses-419!2scr!4v1769628204690!5m2!1ses-419!2scr"
+                                data-target="map-liberia">
+                                <i class="fab fa-google"></i> Google Maps
+                            </button>
+                            <button class="btn btn-outline btn-sm btn-map-trigger" data-map-type="waze"
+                                data-src="https://embed.waze.com/iframe?zoom=16&lat=10.636270&lon=-85.430546&ct=livemap"
+                                data-target="map-liberia">
+                                <i class="fab fa-waze"></i> Waze
+                            </button>
+                            <a href="https://waze.com/ul?ll=10.636270,-85.430546&navigate=yes" target="_blank"
+                                class="btn btn-secondary btn-sm mobile-waze-link">
+                                <i class="fas fa-location-arrow"></i> Ir con Waze
+                            </a>
+                        </div>
+
+                        <!-- Map Facade Container -->
+                        <div class="map-container" id="map-liberia">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60617.60704605025!2d-85.51711382490151!3d10.629533388934833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f757d2a8a1c08e5%3A0xb2f8a494fb368393!2sProvincia%20de%20Guanacaste%2C%20Liberia!5e1!3m2!1ses-419!2scr!4v1769628204690!5m2!1ses-419!2scr"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Cartago -->
+                <article class="locale-card scroll-reveal fade-up delay-1">
+                    <div class="locale-image">
+                        <img src="img/locales/Cartago.jpg" alt="Restaurante en Cartago" loading="lazy">
+                        <div class="locale-badge locale-badge-cartago">Cartago</div>
+                    </div>
+                    <div class="locale-content">
+                        <h2 class="locale-title">Cartago</h2>
+                        <p class="locale-address"><i class="fas fa-map-marker-alt text-accent"></i> 400m norte de
+                            Restaurante Food</p>
+
+                        <div class="map-actions">
+                            <button class="btn btn-primary active btn-sm btn-map-trigger" data-map-type="google"
+                                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60766.0012329061!2d-83.96638927949621!3d9.854204852301624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df1021af2921%3A0xb5e5548558a39c52!2sProvincia%20de%20Cartago%2C%20Cartago!5e1!3m2!1ses-419!2scr!4v1769628282027!5m2!1ses-419!2scr"
+                                data-target="map-cartago">
+                                <i class="fab fa-google"></i> Google Maps
+                            </button>
+                            <button class="btn btn-outline btn-sm btn-map-trigger" data-map-type="waze"
+                                data-src="https://embed.waze.com/iframe?zoom=13&lat=9.864166&lon=-83.921642&ct=livemap"
+                                data-target="map-cartago">
+                                <i class="fab fa-waze"></i> Waze
+                            </button>
+                            <a href="https://waze.com/ul?ll=9.864166,-83.921642&navigate=yes" target="_blank"
+                                class="btn btn-secondary btn-sm mobile-waze-link">
+                                <i class="fas fa-location-arrow"></i> Ir con Waze
+                            </a>
+                        </div>
+
+                        <div class="map-container" id="map-cartago">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60766.0012329061!2d-83.96638927949621!3d9.854204852301624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df1021af2921%3A0xb5e5548558a39c52!2sProvincia%20de%20Cartago%2C%20Cartago!5e1!3m2!1ses-419!2scr!4v1769628282027!5m2!1ses-419!2scr"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Puntarenas -->
+                <article class="locale-card scroll-reveal fade-up">
+                    <div class="locale-image">
+                        <img src="img/locales/Puntarenas.jpg" alt="Restaurante en Puntarenas" loading="lazy">
+                        <div class="locale-badge locale-badge-puntarenas">Puntarenas</div>
+                    </div>
+                    <div class="locale-content">
+                        <h2 class="locale-title">Puntarenas</h2>
+                        <p class="locale-address"><i class="fas fa-map-marker-alt text-accent"></i> 100m este de
+                            McDonald's</p>
+
+                        <div class="map-actions">
+                            <button class="btn btn-primary active btn-sm btn-map-trigger" data-map-type="google"
+                                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30371.47531201622!2d-84.84282060196878!3d9.978550118033002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa02eb96dada6b7%3A0x3f48bd110f83d5ec!2sProvincia%20de%20Puntarenas%2C%20Puntarenas!5e1!3m2!1ses-419!2scr!4v1769628403476!5m2!1ses-419!2scr"
+                                data-target="map-puntarenas">
+                                <i class="fab fa-google"></i> Google Maps
+                            </button>
+                            <button class="btn btn-outline btn-sm btn-map-trigger" data-map-type="waze"
+                                data-src="https://embed.waze.com/iframe?zoom=14&lat=9.979155&lon=-84.829731&ct=livemap"
+                                data-target="map-puntarenas">
+                                <i class="fab fa-waze"></i> Waze
+                            </button>
+                            <a href="https://waze.com/ul?ll=9.979155,-84.829731&navigate=yes" target="_blank"
+                                class="btn btn-secondary btn-sm mobile-waze-link">
+                                <i class="fas fa-location-arrow"></i> Ir con Waze
+                            </a>
+                        </div>
+
+                        <div class="map-container" id="map-puntarenas">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30371.47531201622!2d-84.84282060196878!3d9.978550118033002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa02eb96dada6b7%3A0x3f48bd110f83d5ec!2sProvincia%20de%20Puntarenas%2C%20Puntarenas!5e1!3m2!1ses-419!2scr!4v1769628403476!5m2!1ses-419!2scr"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tamarindo -->
+                <article class="locale-card scroll-reveal fade-up delay-1">
+                    <div class="locale-image">
+                        <img src="img/locales/Tamarindo.jpg" alt="Restaurante en Tamarindo" loading="lazy">
+                        <div class="locale-badge locale-badge-guanacaste">Guanacaste</div>
+                    </div>
+                    <div class="locale-content">
+                        <h2 class="locale-title">Tamarindo</h2>
+                        <p class="locale-address"><i class="fas fa-map-marker-alt text-accent"></i> 50m sur de Taco Bell
+                        </p>
+
+                        <div class="map-actions">
+                            <button class="btn btn-primary active btn-sm btn-map-trigger" data-map-type="google"
+                                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15170.466267769609!2d-85.84836965417702!3d10.3008884371251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e39409203c30f%3A0xbb189f5e2cc1f893!2sProvincia%20de%20Guanacaste%2C%20Tamarindo!5e1!3m2!1ses-419!2scr!4v1769628482557!5m2!1ses-419!2scr"
+                                data-target="map-tamarindo">
+                                <i class="fab fa-google"></i> Google Maps
+                            </button>
+                            <button class="btn btn-outline btn-sm btn-map-trigger" data-map-type="waze"
+                                data-src="https://embed.waze.com/iframe?zoom=15&lat=10.297856&lon=-85.841417&ct=livemap"
+                                data-target="map-tamarindo">
+                                <i class="fab fa-waze"></i> Waze
+                            </button>
+                            <a href="https://waze.com/ul?ll=10.297856,-85.841417&navigate=yes" target="_blank"
+                                class="btn btn-secondary btn-sm mobile-waze-link">
+                                <i class="fas fa-location-arrow"></i> Ir con Waze
+                            </a>
+                        </div>
+
+                        <div class="map-container" id="map-tamarindo">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15170.466267769609!2d-85.84836965417702!3d10.3008884371251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e39409203c30f%3A0xbb189f5e2cc1f893!2sProvincia%20de%20Guanacaste%2C%20Tamarindo!5e1!3m2!1ses-419!2scr!4v1769628482557!5m2!1ses-419!2scr"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TIQUICIA<span class="highlight-text">FOOD</span></h3>
+                    <p>Sabor auténtico, experiencia moderna.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horario</h4>
+                    <p>Lun - Vie: 11am - 10pm</p>
+                    <p>Sáb - Dom: 9am - 11pm</p>
+                </div>
+                <!-- ... other footer cols if needed ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TiquiciaFood. Todos los derechos reservados. | <a href="privacidad.html"
+                        style="color: inherit;">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/69633d7c987b03197cb20051/1jelqgcbd';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

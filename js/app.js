@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const createBranding = () => {
         try {
             const branding = document.createElement('a');
-            branding.href = '#';
+             branding.href = 'https://nextwebcr.com';
+            branding.target = '_blank';
+            branding.rel = 'noopener noreferrer';
             branding.className = 'branding-watermark';
             branding.innerHTML = `
                 <img src="img/logo.png" alt="NextWeb CR" class="branding-logo">

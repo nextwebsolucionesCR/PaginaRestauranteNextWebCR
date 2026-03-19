@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // WhatsApp Logic
     const openWhatsApp = (dishName) => {
-        const phone = "50622222222"; // Replace with actual number
+        const phone = "50670204207"; // Replace with actual number
         const message = `Hola, me gustaría consultar más detalles sobre el platillo: ${dishName}`;
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
